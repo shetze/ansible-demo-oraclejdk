@@ -1,3 +1,6 @@
 inventory
 inventory/hosts
+plugins
+plugins/callback_plugins
+plugins/callback_plugins/fix-ssl.py
 ansible.cfg
