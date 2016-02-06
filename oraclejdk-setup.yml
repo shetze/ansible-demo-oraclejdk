@@ -1,0 +1,6 @@
+---
+- include: oracle-windows-setup.yml
+- include: oracle-suse-setup.yml
+- include: oracle-rhel-setup.yml
+- include: oracle-solaris-setup.yml
+

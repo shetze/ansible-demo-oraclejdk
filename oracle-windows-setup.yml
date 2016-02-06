@@ -1,0 +1,11 @@
+---
+- name: set up OracleJDK on Windows
+  hosts: windows
+
+  tasks:
+    - name: set up temp dir in Windows
+      win_file: path=C:\temp state=directory
+    - name: copy JDK to Windows client
+      win_get_url: url=http://192.168.122.1/data/jre-8u71-windows-x64.exe dest=c:\temp\jre.exe
+    - name: run exe installer
+      raw: c:\temp\jre.exe INSTALL_SILENT=Enable

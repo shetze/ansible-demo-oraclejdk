@@ -1,0 +1,6 @@
+---
+- include: oracle-windows-destroy.yml
+- include: oracle-suse-destroy.yml
+- include: oracle-rhel-destroy.yml
+- include: oracle-solaris-destroy.yml
+

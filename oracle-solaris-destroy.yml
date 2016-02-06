@@ -1,0 +1,9 @@
+---
+- name: remove OracleJDK on Solaris
+  hosts: solaris
+  become: yes
+
+  tasks:
+    - name: remove JDK on Solaris
+      pkg5: name=developer/java/jdk-8 state=absent
+

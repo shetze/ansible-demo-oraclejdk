@@ -1,0 +1,13 @@
+---
+- name: set up OracleJDK on RHEL
+  hosts: rhel
+  become: yes
+
+  tasks:
+    - name: copy JDK to RHEL client
+      get_url: url=http://192.168.122.1/data/jre-8u71-linux-x64.tar.gz dest=/tmp/jre.tar.gz
+    - name: create java dir
+      file: path=/usr/java state=directory
+    - name: extract JDK to proper path
+      unarchive: src=/tmp/jre.tar.gz dest=/usr/java copy=no
+

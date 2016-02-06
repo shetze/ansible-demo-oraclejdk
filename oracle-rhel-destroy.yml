@@ -1,0 +1,9 @@
+---
+- name: remove OracleJDK on RHEL
+  hosts: rhel
+  become: yes
+
+  tasks:
+    - name: remove java dir
+      file: path=/usr/java state=absent
+

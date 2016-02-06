@@ -1,0 +1,9 @@
+---
+- name: remove OracleJDK on Suse
+  hosts: suse
+  become: yes
+
+  tasks:
+    - name: remove java dir
+      file: path=/usr/java state=absent
+

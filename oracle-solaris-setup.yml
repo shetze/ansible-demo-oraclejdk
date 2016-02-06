@@ -1,0 +1,9 @@
+---
+- name: install OracleJDK on Solaris
+  hosts: solaris
+  become: yes
+
+  tasks:
+    - name: install on Solaris client
+      pkg5: name=developer/java/jdk-8 state=present
+

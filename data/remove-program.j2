@@ -1,0 +1,7 @@
+#
+# Script:: remove-program.ps1
+# Remove program from Windows
+#
+
+$application = Get-WmiObject Win32_Product -filter "Name='{{ program }}'"
+$application.Uninstall()
