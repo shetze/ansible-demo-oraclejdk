@@ -1,5 +1,5 @@
 ---
-- name: install OracleJDK on Solaris
+- name: set up OracleJDK on Solaris
   hosts: solaris
   become: yes
 
