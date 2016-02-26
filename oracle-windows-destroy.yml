@@ -2,13 +2,13 @@
 - name: remove OracleJDK on Windows
   hosts: windows
   vars:
-    program: 'Java 8 Update 71 (64-bit)'
+    program: 'Java 8 Update 73 (64-bit)'
 
   tasks:
     - name: copy Java remove script to temp
-      win_template: src=data/remove-program.j2 dest=C:\temp\remove-program.ps1
+      win_template: src=data/remove-program.j2 dest=C:\\temp\\remove-program.ps1
     - name: remove application
-      raw: C:\temp\remove-program.ps1
+      raw: "C:\\temp\\remove-program.ps1"
     - name: remove temp dir in Windows
-      win_file: path=C:\temp state=absent
+      win_file: path=C:\\temp state=absent
 
