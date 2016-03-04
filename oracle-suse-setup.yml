@@ -5,7 +5,7 @@
 
   tasks:
     - name: copy JDK to Suse client
-      get_url: url=http://192.168.122.1/data/jre-8u71-linux-x64.tar.gz dest=/tmp/jre.tar.gz
+      get_url: url=http://192.168.122.1/data/jre-8u73-linux-x64.tar.gz dest=/tmp/jre.tar.gz
     - name: create java dir
       file: path=/usr/java state=directory
     - name: extract JDK to proper path
