@@ -9,3 +9,9 @@
       win_get_url: url=http://192.168.122.1/data/jre-8u73-windows-x64.exe dest=c:\\temp\jre.exe
     - name: run exe installer
       raw: "c:\\temp\\jre.exe INSTALL_SILENT=Enable"
+    - name: deactivate auto updater
+      win_regedit:
+        key: HKLM:\SOFTWARE\Wow6432Node\JavaSoft\Java Update\Policy
+        value: EnableJavaUpdate
+        data: 0
+        datatype: dword
