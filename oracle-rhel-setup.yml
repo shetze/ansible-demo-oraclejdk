@@ -5,7 +5,7 @@
 
   tasks:
     - name: copy JDK to RHEL client
-      get_url: url=http://192.168.123.73/data/jre-8u73-linux-x64.tar.gz dest=/tmp/jre.tar.gz
+      get_url: url=http://192.168.123.73/data/jre-8u91-linux-x64.tar.gz dest=/tmp/jre.tar.gz
     - name: create java dir
       file: path=/usr/java state=directory
     - name: extract JDK to proper path
