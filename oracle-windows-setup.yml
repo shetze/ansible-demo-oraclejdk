@@ -6,6 +6,6 @@
     - name: set up temp dir in Windows
       win_file: path=C:\\temp state=directory
     - name: copy JDK to Windows client
-      win_get_url: url=http://192.168.123.73/data/jre-8u91-windows-x64.exe dest=c:\\temp\jre.exe
+      win_get_url: url=http://192.168.123.191/data/jre-8u91-windows-x64.exe dest=c:\\temp\jre.exe
     - name: run exe installer
       raw: "c:\\temp\\jre.exe INSTALL_SILENT=Enable"
